@@ -20,18 +20,26 @@ spring:
           uri: lb://CUSTOMERSERVICE
           predicates:
             - Path=/auth/**,/customers/**
+          filters:
+            - AuthenticationFilter
         - id: METERSERVICE
           uri: lb://METERSERVICE
           predicates:
             - Path=/meters/**,/usage/**
+          filters:
+            - AuthenticationFilter
         - id: BILLINGSERVICE
           uri: lb://BILLINGSERVICE
           predicates:
             - Path=/billing/**
+          filters:
+            - AuthenticationFilter
         - id: PAYMENTSERVICE
           uri: lb://PAYMENTSERVICE
           predicates:
             - Path=/payment/**
+          filters:
+            - AuthenticationFilter
 
 eureka:
   instance:

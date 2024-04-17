@@ -1,4 +1,4 @@
-package com.wissen.gateway.ApiGateway;
+package com.wissen.gateway.ApiGateway.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
